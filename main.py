@@ -1,14 +1,11 @@
-from kivy.app import App
-from kivy.uix.button import Button
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
+from kivymd.app import MDApp
+from kivymd.uix.label import MDLabel
 
-class Interface(FloatLayout):
-    def display_information(self):
-        data=self.ids.textInput.text
-        self.ids.label.text=data
-class ProjectApp(App):
-    pass
 
-ProjectApp().run()
+class Main_App(MDApp):
+    def build(self):
+        return MDLabel(text="Welcome to Agverse Technologies Pvt Ltd", halign="center")
+
+
+if __name__ == '__main__':
+    Main_App().run()
